@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    
+
+
+
+    <ul>
+        {% for framework in frameworks %}
+            <li>
+            {{ framework.name }}/
+            {{ framework.language }}/
+            {{ framework.date_of_creation }}
+            <a href="{% url 'delete' framework.id %}">deletar</a>/
+            <a href="{% url 'update' framework.id %}">editar</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}
